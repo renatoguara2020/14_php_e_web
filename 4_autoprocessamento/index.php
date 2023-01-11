@@ -2,7 +2,7 @@
 
   $method = $_SERVER['REQUEST_METHOD'];
 
-  if(isset($_POST['nome']) && ($_POST['nome'] != null)) {
+  if(isset($_POST['nome']) && (!empty($_POST['nome']))) {
 
     $nome = $_POST['nome'];
 
