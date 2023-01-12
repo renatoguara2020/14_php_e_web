@@ -21,7 +21,7 @@
             <label for="" class="form-label">Email:</label>
             <input type="text" name="email" placeholder="Digite seu Email" class="form-control form-control-sm">
             <br><br>
-            <button type="submit" name="submeter" class="btn btn-info">Enviar</button>
+            <button type="submit" class="btn btn-success">Enviar</button>
         </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
