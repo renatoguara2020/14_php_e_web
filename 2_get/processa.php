@@ -3,7 +3,7 @@
 
   if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
-    if(empty($_POST['nome']) || (empty($_POST['idade'])) || (empty($_POST['email']))){
+    if(empty($_POST['nome']) || empty($_POST['idade']) || empty($_POST['email'])){
 
      // print_r($_POST);
 
