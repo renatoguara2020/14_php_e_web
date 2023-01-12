@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <title>Document</title>
 </head>
 
@@ -12,14 +14,17 @@
 
     <form action="processa.php" method="post" enctype="multipart/form-data">
 
-        <label for="">Nome:</label>
-        <input type="text" name="nome" placeholder="Digite seu Nome">
-        <label for="">Idade:</label>
-        <input type="text" name="idade" placeholder="Digite sua Idade">
-        <label for="">Email:</label>
-        <input type="text" name="email" placeholder="Digite seu Email">
-        <button type="submit" name="submeter">Enviar</button>
+        <label for="" class="form-label">Nome:</label>
+        <input type="text" name="nome" placeholder="Digite seu Nome" class="form-control">
+        <label for="" class="form-label">Idade:</label>
+        <input type="text" name="idade" placeholder="Digite sua Idade" class="form-control">
+        <label for="" class="form-label">Email:</label>
+        <input type="text" name="email" placeholder="Digite seu Email" class="form-control">
+        <button type="submit" name="submeter" class="btn btn-info">Enviar</button>
     </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>

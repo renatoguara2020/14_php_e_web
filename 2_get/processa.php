@@ -2,17 +2,29 @@
 
 
   if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    if(isset($_POST['nome']) && isset($_POST['idade']) && $_POST['email']){
-      $nome = $_POST['nome'];
-      $idade = $_POST['idade'];
+
+    if(isset($_POST['nome']) && isset($_POST['idade']) && isset($_POST['email'])){
+
+      $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
+      $idade = filter_input(INPUT_POST, 'idade', FILTER_SANITIZE_NUMBER_INT);
       $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-      print_r($_POST);
+     // print_r($_POST);
     
 
-}
 
-echo ("O seu nome é  $nome  e você tem  $idade  anos e seu e-mail e: $email");
 
-}
+$conn = new PDO("mysql:host=localhost;dbname=db_testes", 'root', '');
 
+
+$stmt = $conn->prepare("INSERT INTO usuarios (nome, idade, email) VALUES (:nome, :idade, :email)");
+$stmt->bindParam(':nome', $nome, PDO::PARAM_STR);
+$stmt->bindParam(':idade', $idade, PDO::PARAM_INT);
+$stmt->bindParam(':email', $email, PDO::PARAM_STR);
+$stmt->execute();
+
+echo ('O seu nome é  ' .  $nome .'  e você tem  '. $idade . 'anos e seu e-mail e: '.  $email);
+
+  }
+
+  }
 ?>
