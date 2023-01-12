@@ -1,5 +1,7 @@
 <?php
 
+require_once 'connection.php';
+
 
   if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
@@ -16,9 +18,9 @@
       $idade = filter_input(INPUT_POST, 'idade', FILTER_SANITIZE_NUMBER_INT);
       $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
 
-    
+  
 
-$conn = new PDO("mysql:host=localhost;dbname=db_testes", 'root', '');
+
 
 
 $stmt = $conn->prepare("INSERT INTO usuarios (nome, idade, email) VALUES (:nome, :idade, :email)");

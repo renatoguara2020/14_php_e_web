@@ -20,7 +20,7 @@
             <input type="text" name="idade" placeholder="Digite sua Idade" class="form-control form-control-sm">
             <label for="" class="form-label">Email:</label>
             <input type="text" name="email" placeholder="Digite seu Email" class="form-control form-control-sm">
-            <br><br>
+            <br>
             <button type="submit" class="btn btn-success">Enviar</button>
         </form>
     </div>
