@@ -5,7 +5,11 @@ include_once 'connection.php';
 
   if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
+    $erros = Array();
+
     if(empty($_POST['nome']) || empty($_POST['idade']) || empty($_POST['email'])){
+
+      $erros[] = 'Preencha todos os campos';
 
      // print_r($_POST);
 
