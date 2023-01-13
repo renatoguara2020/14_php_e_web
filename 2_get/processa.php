@@ -9,11 +9,13 @@ include_once 'connection.php';
 
     if(empty($_POST['nome']) || empty($_POST['idade']) || empty($_POST['email'])){
 
-      $erros[] = 'Preencha todos os campos';
+      $erros[] = $_POST['nome'] = 'Preencha o campo Nome';
+      $erros[] = $_POST['idade'] = 'Preencha o campo idade';
+      $erros[] = $_POST['email'] = 'Preencha o campo email';
 
      // print_r($_POST);
 
-     echo 'Preencha os campos com suas informações';
+     print_r ($erros);
     
 
     }else{
